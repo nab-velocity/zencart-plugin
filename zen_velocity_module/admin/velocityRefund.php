@@ -76,9 +76,9 @@ if (isset($_POST)) {
                     $isTestAccount        = TRUE;
                 } else {
                     $identitytoken        = MODULE_PAYMENT_VELOCITY_IDENTITYTOKEN;
-                    $workflowid           = MODULE_PAYMENT_VELOCITY_MERCHANTPROFILEID;
+                    $workflowid           = MODULE_PAYMENT_VELOCITY_WORKFLOWID;
                     $applicationprofileid = MODULE_PAYMENT_VELOCITY_APPLICATIONPROFILEID;
-                    $merchantprofileid    = MODULE_PAYMENT_VELOCITY_WORKFLOWID;
+                    $merchantprofileid    = MODULE_PAYMENT_VELOCITY_MERCHANTPROFILEID;
                     $isTestAccount        = FALSE;
                 }
                 try {            
