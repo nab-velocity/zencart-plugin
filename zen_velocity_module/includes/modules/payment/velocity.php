@@ -438,7 +438,7 @@ class velocity extends base {
             $messageStack->add_session(FILENAME_CHECKOUT_FAILURE, $e->getMessage() . '<!-- ['.$this->code.'] -->', 'error');
             zen_redirect(zen_href_link(FILENAME_CHECKOUT_FAILURE, '', 'SSL', true, false));
         }
-        
+
         $errors = '';
         if (is_array($response) && isset($response['Status']) && $response['Status'] == 'Successful') {
 
@@ -454,7 +454,7 @@ class velocity extends base {
                                 'Reference'    => 'xyz',
                                 'EmployeeId'   => '11'
                         ));
-
+ echo 'ashish';
                         if ( is_array($cap_response) && !empty($cap_response) && isset($cap_response['Status']) && $cap_response['Status'] == 'Successful') {
 
                                 /* save the transaction detail with that order.*/ 

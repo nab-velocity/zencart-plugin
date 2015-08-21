@@ -1,5 +1,4 @@
 <?php
-
 /* 
  * The `VelocityConnection` class is responsible for making requests to 
  * the Velocity API and parsing the returned response.
@@ -79,8 +78,7 @@ class VelocityConnection
                                                                             )
                                                                          );
                         
-			if ( $error == NULL && $response != '' )
-			          
+			if ( $error == NULL && $response != '' )      
 				return $response;
 			else
 				throw new Exception( VelocityMessage::$descriptions['errsignon'] );
@@ -149,7 +147,6 @@ class VelocityConnection
 		$header[] = 'Host: '.$host;
 		
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-		
 		//The following 3 will retrieve the header with the response. Remove if you do not want the response to contain the header.
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		//curl_setopt($ch, CURLOPT_VERBOSE, 1); // Will output network information to the Console
@@ -173,10 +170,11 @@ class VelocityConnection
 		
                 try {
                     
-                    $res = curl_exec($ch);
-                    
+                    $res = curl_exec($ch);   
                     list($header, $body) = explode("\r\n\r\n", $res, 2);
-
+                    if (strpos($header,"100 Continue") !== false) {
+                        list($header, $body) = explode("\r\n\r\n", $body, 2);
+                    }   
                     $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
                     curl_close($ch);
                 } catch (Exception $ex) {
@@ -208,7 +206,7 @@ class VelocityConnection
                     $body = $res[1];
                     if($res[1] == '')
                         $body = $res[0];
-                }
+                } 
 		// Parse response, depending on value of the Content-Type header.
 		$response = null;
 		if (preg_match('/json/', $contentType)) {
