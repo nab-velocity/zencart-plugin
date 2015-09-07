@@ -21,3 +21,5 @@
     For Refund option at admin side first open customers->oders list and then 'View Orders' and click on perticular order refund is process after change the order status  'Velocity Refund' shows the refund form with refund shipping checkbox then put amount and 'Process Refund' or 'Not Now'.
 
     For upadte/uninstall the velocity module of Zencart goto Modules Menu option then select module and edit for change the configuration and for uninstallation remove the module but code not remove from sever.
+	
+	4.  We have saved the raw request and response objects in &lt;prefix&gt;_velocity_transactions table.
