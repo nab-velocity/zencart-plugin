@@ -1,11 +1,10 @@
 Velocity Zencart Module Installation Documentation 
 
-1.	Download velocity Zencart Module by clicking on Download zip button on the right bottom of this page.
-
-2.	Configuration Requirement: Zencart site Version 1.5 or above version must be required for our velocity payment module installation.
+1.	Configuration Requirement: Zencart site Version 1.5 or above version must be required for our velocity payment module installation.
+2. Download velocity Zencart Module by clicking on Download zip button on the right bottom of this page.
 
 3.	Installation & Configuration of Module from Admin Panel:
-	  Unzip module code and upload on your server as per the directory structure matched with your zencart dircetory structure and admin folder may be change but admin folder content upload in your admin folder after upload on code Login login admin panel and click on 'Modules' Menu option then click on 'payment'.
+	  Unzip module code and open "zen_velocity_module" folder upload the code on your server as per the directory structure matched with your zencart dircetory structure and admin folder may be change but admin folder content upload in your admin folder after upload on code Login login admin panel and click on 'Modules' Menu option then click on 'payment'.
 
 Show the list of all payment module listed after succesfull upload your velocity module is also listed.
 
